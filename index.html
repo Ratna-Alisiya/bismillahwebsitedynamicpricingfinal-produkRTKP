@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Packaging Rendang</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulasi Smart Packaging</h1>
+
+        <h2>🔧 Generator QR Code</h2>
+        <input type="number" id="r" placeholder="R (0-255)">
+        <input type="number" id="g" placeholder="G (0-255)">
+        <input type="number" id="b" placeholder="B (0-255)">
+        <input type="text" id="kodeSampel" placeholder="Kode Sampel (misal: RTK-001)">
+        <button onclick="generateQR()">Buat QR</button>
+        <canvas id="qrCanvas"></canvas>
+
+        <hr>
+
+        <h2>📷 Pembaca QR Code</h2>
+        <input type="file" accept="image/*" onchange="handleQRFile(this)">
+
+        <div id="quality"></div>
+        <div id="price"></div>
+        <div id="sampleCode"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
